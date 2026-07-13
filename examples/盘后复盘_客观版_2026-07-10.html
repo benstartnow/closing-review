@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A股盘后复盘 · 2026-07-10</title>
+<style>
+:root{--bg:#0a0b0e;--card:#14171f;--card2:#191d27;--line:#242833;--line2:#2e3340;
+--txt:#e8eaf0;--txt2:#a3a9b8;--txt3:#6b7280;--gold:#c9a86a;--gold2:#e6c987;--goldsoft:#8a7647;
+--red:#e5484d;--green:#2ec27e}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;font-size:14px;
+background-image:radial-gradient(900px 500px at 85% -10%,rgba(201,168,106,.07),transparent)}
+.wrap{max-width:900px;margin:0 auto;padding:26px 22px 34px}
+.hd{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;flex-wrap:wrap;gap:8px}
+.hd h1{font-size:23px;font-weight:800;background:linear-gradient(90deg,#fff,var(--gold2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hd .m{color:var(--txt3);font-size:12px}
+.tone{margin-top:14px;background:linear-gradient(135deg,rgba(201,168,106,.1),rgba(201,168,106,.02));border:1px solid var(--goldsoft);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--txt)}
+.tone b{color:var(--gold2)}
+.up{color:var(--red)}.dn{color:var(--green)}
+.sec-t{font-size:12px;letter-spacing:2px;color:var(--gold);margin:22px 0 10px;font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.sec-t::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent)}
+.idx{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.ic{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:10px;padding:11px 10px;position:relative;overflow:hidden}
+.ic::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px}
+.ic.d::before{background:var(--green)}.ic.u::before{background:var(--red)}
+.ic .n{color:var(--txt3);font-size:11px;margin-bottom:5px}
+.ic .p{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.ic .c{font-size:12px;font-weight:700;margin-top:2px}
+.stat{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+.st .v{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums}
+.st .l{color:var(--txt3);font-size:11px;margin-top:4px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.card h3{font-size:12.5px;color:var(--gold2);margin-bottom:12px;font-weight:700;display:flex;justify-content:space-between}
+.card h3 small{color:var(--txt3);font-weight:500;font-size:11px}
+/* 主力资金 */
+.flow{display:flex;gap:6px;flex-wrap:wrap}
+.fb{flex:1;min-width:64px;background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 6px;text-align:center}
+.fb .v{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.fb .l{font-size:10px;color:var(--txt3);margin-top:3px}
+/* 资金流向柱 */
+.fr{display:grid;grid-template-columns:110px 1fr 56px;align-items:center;gap:8px;margin-bottom:9px}
+.fr:last-child{margin-bottom:0}
+.fn{font-size:12px;color:var(--txt2);display:flex;flex-direction:column}
+.ft2{font-size:10px;margin-top:1px}
+.fbar{height:8px;background:var(--card2);border-radius:5px;overflow:hidden}
+.ffill{height:100%;border-radius:5px}
+.fv{font-size:12px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+/* 涨跌榜 */
+.bl{list-style:none;font-size:13px}
+.bl li{padding:7px 0;display:flex;align-items:center;gap:8px;border-bottom:1px dashed var(--line)}
+.bl li:last-child{border:none}
+.bl .rk{width:18px;height:18px;border-radius:5px;background:var(--card2);color:var(--txt3);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bl .nm{color:var(--txt);flex:1;display:flex;align-items:center;gap:6px}
+.bl .tag{font-size:10px;color:var(--txt3);border:1px solid var(--line2);border-radius:4px;padding:0 4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.chip{background:var(--card2);border:1px solid var(--line2);border-radius:6px;padding:4px 9px;font-size:12px;color:var(--txt2)}
+.note{color:var(--txt3);font-size:12px;margin-top:16px;padding:12px 15px;background:var(--card2);border:1px dashed var(--line2);border-radius:9px;line-height:1.75}
+.note b{color:var(--gold2)}
+.ft{margin-top:18px;text-align:center;color:var(--txt3);font-size:11px}
+@media(max-width:680px){.idx{grid-template-columns:repeat(3,1fr)}.stat{grid-template-columns:repeat(3,1fr)}.row{grid-template-columns:1fr}.fr{grid-template-columns:92px 1fr 50px}}
+</style></head><body><div class="wrap">
+
+<div class="hd">
+  <h1>A股盘后复盘 · 客观版</h1>
+  <div class="m">2026-07-10（周五）· 收盘 · 数据源 Tushare Pro</div>
+</div>
+<div class="tone">全天<b>冲高回落</b>：个股普涨（<b>3772 涨 / 1678 跌</b>）但主要指数全线收绿，呈<b>权重与科技砸盘、题材普涨</b>的结构分化格局，跌幅与科技属性强相关。以下为盘面客观数据，不含方向性预测。</div>
+
+<div class="sec-t">一 · 主要指数</div>
+<div class="idx"><div class="ic d"><div class="n">上证指数</div><div class="p dn">3996.16</div><div class="c dn">-1.0%</div></div><div class="ic d"><div class="n">深证成指</div><div class="p dn">15046.67</div><div class="c dn">-2.29%</div></div><div class="ic d"><div class="n">创业板指</div><div class="p dn">3842.73</div><div class="c dn">-4.37%</div></div><div class="ic d"><div class="n">沪深300</div><div class="p dn">4780.79</div><div class="c dn">-1.96%</div></div><div class="ic d"><div class="n">科创50</div><div class="p dn">2064.98</div><div class="c dn">-5.53%</div></div><div class="ic d"><div class="n">北证50</div><div class="p dn">1209.15</div><div class="c dn">-0.02%</div></div></div>
+
+<div class="sec-t">二 · 市场宽度与情绪</div>
+<div class="stat">
+  <div class="st"><div class="v" style="color:var(--gold2)">3.41万亿</div><div class="l">两市成交（放量）</div></div>
+  <div class="st"><div class="v up">92</div><div class="l">涨停</div></div>
+  <div class="st"><div class="v dn">4</div><div class="l">跌停</div></div>
+  <div class="st"><div class="v" style="color:var(--txt2)">91</div><div class="l">炸板（率≈50%）</div></div>
+  <div class="st"><div class="v" style="color:var(--txt2)">2连板</div><div class="l">最高高度</div></div>
+</div>
+
+<div class="sec-t">三 · 主力资金结构（全市场）</div>
+<div class="card"><h3>全市场资金净额 <small>单位：亿元</small></h3>
+  <div class="flow">
+    <div class="fb"><div class="v dn">-398</div><div class="l">主力净流出</div></div>
+    <div class="fb"><div class="v dn">-291</div><div class="l">超大单</div></div>
+    <div class="fb"><div class="v dn">-107</div><div class="l">大单</div></div>
+    <div class="fb"><div class="v up">+64</div><div class="l">中单</div></div>
+    <div class="fb"><div class="v up">+334</div><div class="l">小单</div></div>
+  </div>
+  <div style="color:var(--txt3);font-size:11.5px;margin-top:10px">大单（超大单+大单）合计净流出约 398 亿，中小单合计净流入约 398 亿——放量下跌中呈现资金派发特征。</div>
+</div>
+
+<div class="sec-t">四 · 板块资金流向 TOP5</div>
+<div class="row">
+  <div class="card"><h3>净流入 TOP5 <small>亿元</small></h3><div class="fr"><div class="fn">商业航天<span class="ft2 up">+2.7%</span></div><div class="fbar"><div class="ffill" style="width:100%;background:var(--red)"></div></div><div class="fv up">+110.9</div></div><div class="fr"><div class="fn">军工<span class="ft2 up">+2.37%</span></div><div class="fbar"><div class="ffill" style="width:87%;background:var(--red)"></div></div><div class="fv up">+96.0</div></div><div class="fr"><div class="fn">国防军工<span class="ft2 up">+3.43%</span></div><div class="fbar"><div class="ffill" style="width:70%;background:var(--red)"></div></div><div class="fv up">+77.5</div></div><div class="fr"><div class="fn">军民融合<span class="ft2 up">+2.73%</span></div><div class="fbar"><div class="ffill" style="width:69%;background:var(--red)"></div></div><div class="fv up">+76.2</div></div><div class="fr"><div class="fn">卫星互联网<span class="ft2 up">+3.39%</span></div><div class="fbar"><div class="ffill" style="width:57%;background:var(--red)"></div></div><div class="fv up">+62.9</div></div></div>
+  <div class="card"><h3>净流出 TOP5 <small>亿元</small></h3><div class="fr"><div class="fn">科技风格<span class="ft2 dn">-4.29%</span></div><div class="fbar"><div class="ffill" style="width:100%;background:var(--green)"></div></div><div class="fv dn">-459.5</div></div><div class="fr"><div class="fn">东方财富热股<span class="ft2 dn">-2.03%</span></div><div class="fbar"><div class="ffill" style="width:95%;background:var(--green)"></div></div><div class="fv dn">-437.0</div></div><div class="fr"><div class="fn">电子<span class="ft2 dn">-3.13%</span></div><div class="fbar"><div class="ffill" style="width:95%;background:var(--green)"></div></div><div class="fv dn">-435.1</div></div><div class="fr"><div class="fn">融资融券<span class="ft2 up">+0.73%</span></div><div class="fbar"><div class="ffill" style="width:93%;background:var(--green)"></div></div><div class="fv dn">-427.2</div></div><div class="fr"><div class="fn">大盘股<span class="ft2 dn">-0.5%</span></div><div class="fbar"><div class="ffill" style="width:89%;background:var(--green)"></div></div><div class="fv dn">-410.8</div></div></div>
+</div>
+
+<div class="sec-t">五 · 行业涨跌幅榜 TOP5</div>
+<div class="row">
+  <div class="card"><h3>领涨行业</h3><ul class="bl"><li><span class="rk">1</span><span class="nm">航天装备Ⅲ<span class="tag">行业</span></span><span class="up">+10.36%</span></li><li><span class="rk">2</span><span class="nm">医疗研发外包<span class="tag">行业</span></span><span class="up">+7.11%</span></li><li><span class="rk">3</span><span class="nm">院线<span class="tag">行业</span></span><span class="up">+6.72%</span></li><li><span class="rk">4</span><span class="nm">航海装备Ⅲ<span class="tag">行业</span></span><span class="up">+6.3%</span></li><li><span class="rk">5</span><span class="nm">风电整机<span class="tag">行业</span></span><span class="up">+6.27%</span></li></ul></div>
+  <div class="card"><h3>领跌行业</h3><ul class="bl"><li><span class="rk">1</span><span class="nm">橡胶助剂<span class="tag">行业</span></span><span class="dn">-8.71%</span></li><li><span class="rk">2</span><span class="nm">集成电路制造<span class="tag">行业</span></span><span class="dn">-8.49%</span></li><li><span class="rk">3</span><span class="nm">半导体设备<span class="tag">行业</span></span><span class="dn">-7.81%</span></li><li><span class="rk">4</span><span class="nm">半导体材料<span class="tag">行业</span></span><span class="dn">-6.32%</span></li><li><span class="rk">5</span><span class="nm">中芯概念<span class="tag">概念</span></span><span class="dn">-6.15%</span></li></ul></div>
+</div>
+
+<div class="sec-t">六 · 连板梯队（客观复盘）</div>
+<div class="card"><h3>2 连板梯队 <small>共 10 只 · 首板 82 只</small></h3>
+  <div class="chips"><span class="chip">国华退</span><span class="chip">中鼎股份</span><span class="chip">欢瑞世纪</span><span class="chip">亚联机械</span><span class="chip">柘中股份</span><span class="chip">高德红外</span><span class="chip">星网宇达</span><span class="chip">立方制药</span><span class="chip">贵绳股份</span><span class="chip">好莱客</span></div>
+  <div style="color:var(--txt3);font-size:11.5px;margin-top:11px">全场最高仅 2 连板，无 3 板及以上高度；炸板率约 50%，反映短线接力意愿偏弱。以上为当日实际封板情况回顾，非个股推荐。</div>
+</div>
+
+<div class="note">
+<b>客观小结</b>：今日两市放量至 3.41 万亿，呈放量下跌 + 主力净流出（-398 亿）格局。资金结构上，大单撤退、中小单接盘，派发特征明显。板块层面资金从科技风格、电子等高位方向净流出，向军工、商业航天、卫星互联网等方向净流入，"高低切换"特征显著；行业涨跌榜两端分化剧烈——航天装备领涨逾 10%，集成电路制造、半导体设备领跌逾 8%。个股普涨与指数收绿的背离，主要源于权重与科技板块拖累。以上均为盘面客观数据陈述，不含方向性预测与个股买卖建议。
+</div>
+
+<div class="ft">数据来源 Tushare Pro（真实收盘数据）· 本报告为客观盘面复盘，不构成投资建议 · 小策</div>
+</div></body></html>
